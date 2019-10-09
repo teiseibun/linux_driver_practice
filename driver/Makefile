@@ -16,3 +16,7 @@ install:
 
 uninsall:
 	sudo rmmod demo_drv
+
+dev_node:
+	sudo mknod /dev/demo_drv c 60 0 #60 and 0 are major and minor revision number
+	#check the result by typing: ls /dev/demo_drv

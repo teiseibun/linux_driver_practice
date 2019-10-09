@@ -29,7 +29,7 @@ static int drv_init(void)
 	//printk(KERN_INFO "hello world\n");
 
 	if(register_chrdev(MAJOR_NUM, "demo_drv", &drv_fops) < 0) {
-		printk("<1>%s: can't get major %d\n", MODULE_NAME, MAJOR_NUM);
+		printk("%s: can't get major %d\n", MODULE_NAME, MAJOR_NUM);
 		return(-EBUSY);
 	}
 
