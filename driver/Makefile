@@ -11,8 +11,8 @@ clean:
 	make -C $(KERNEL_DIR) M=$(PWD) clean
 
 install:
-	sudo insmod demo.ko
-	#check the result by typing: lsmod | grep "demo"
+	sudo insmod demo_drv.ko
+	#check the result by typing: lsmod | grep "demo_drv"
 
 uninsall:
-	sudo rmmod demo
+	sudo rmmod demo_drv

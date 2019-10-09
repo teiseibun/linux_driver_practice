@@ -33,7 +33,7 @@ static int drv_init(void)
 		return(-EBUSY);
 	}
 
-	printk("<1>%s: started\n", MODULE_NAME);
+	printk("%s: started\n", MODULE_NAME);
 
 	return 0;
 }
@@ -44,8 +44,7 @@ static void drv_exit(void)
 	//printk(KERN_INFO "goodbye world\n");
 
 	unregister_chrdev(MAJOR_NUM, "demo_drv");
-	printk("<1>%s: removed\n", MODULE_NAME);
-
+	printk("%s: removed\n", MODULE_NAME);
 }
 
 /* driver operating interface (open, close, ioctl, read and write) */
